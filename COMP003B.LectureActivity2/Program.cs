@@ -4,7 +4,7 @@
  *
  */
 
-using COMP003B.LectureActivity2.Middleware
+using COMP003B.LectureActivity2.Middleware;
 
 namespace COMP003B.LectureActivity2
 {
@@ -30,9 +30,12 @@ namespace COMP003B.LectureActivity2
             app.UseHttpsRedirection();
 
 
+
             app.UseStaticFiles();
 
             app.UseMiddleware<RequestLoggingMiddleware>();
+
+            app.UseWelcomePage("/welcome");
 
             app.UseRouting();
 
